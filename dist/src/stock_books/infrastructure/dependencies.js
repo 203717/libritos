@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const addBookUseCase_1 = require("../application/addBookUseCase");
+const getBooksUseCase_1 = require("../application/getBooksUseCase");
+const getByIdUseCase_1 = require("../application/getByIdUseCase");
+const bookRepositoryImp_1 = require("./bookRepositoryImp");
+const bookRepository = new bookRepositoryImp_1.BookRepositoryImp();
+const addBookUseCase = new addBookUseCase_1.AddBookUseCase(bookRepository);
+const getBooksUseCase = new getBooksUseCase_1.GetBooksUseCase(bookRepository);
+const getBookByIdUseCase = new getByIdUseCase_1.GetBookByIdUseCase(bookRepository);
